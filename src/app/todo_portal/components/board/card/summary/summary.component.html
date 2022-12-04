@@ -1,0 +1,10 @@
+<div class="card" [draggable]="'true'" (dragstart)="identifyCardBeingDragged($event)" id="list-{{listIndex}}-card-{{cardIndex}}" attr.listIndex="{{listIndex}}" attr.cardIndex="{{cardIndex}}" (dragover)="allowCardDragToBeDropped($event)">
+    <div class="card-body">
+        <h4 class="card-title" [(appContentEdit)]="card.header" [draggable]="'false'" (click)="$event.stopPropagation()"> </h4>
+        <h6 class="text-muted card-subtitle mb-2" [(appContentEdit)]="card.summary" [draggable]="'false'" (click)="$event.stopPropagation()"></h6>
+        
+        
+        <button class="btn btn-primary w-10" (click)="cardClick();$event.stopPropagation()">View</button> &nbsp;
+        <button class="btn btn-danger w-10" (click)="deleteTask(card.id)">Delete</button>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container">
+        <div class="workspaceName">           
+           <h4> <input type="text" aria-describedby="emailHelp" value="{{board.boardName}}" name="boardName" #boardName
+                class="primary-input"> </h4>
+            <input type="hidden" value="{{board.boardId}}" name="boardId" #boardId>
+            <button mat-icon-button color="primary" (click)="clickme(boardId.value,boardName.value)"
+                class="btn btn-primary"> <i
+                class="bi bi-pen"></i></button>
+            <button mat-icon-button color="warn" (click)="deleteme(boardId.value)" class="btn btn-danger"> <i
+                    class="bi bi-trash3-fill"></i></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <button  mat-icon-button color="secondary" class="btn btn-secondary" (click)="pdf()"><i class="bi bi-download"></i>&nbsp;&nbsp;pdf</button>     
+        <!-- <button type="button" class="btn btn-secondary mb-3" (click)="excel()">print with excel</button> -->
+            <div class="col save-btn"><button (click)="saveBoard()" class="btn btn-primary">Save</button></div>
+        </div>
+     </div>
+
+     <!-- <div> -->
+        <!-- <button type="button" class="btn btn-secondary mb-3" (click)="pdf()"       
+        >print with pdf</button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-secondary mb-3" (click)="excel()"       
+        >print with excel</button> -->
+    <!-- </div> -->
+<!-- </div> --> 
+
+&nbsp; <div class="container" style="max-width:inherit;width:auto;height:100%;">
+    <div class="board-view-container">
+        <app-list *ngFor="let list of lists;let i = index" [list]="list" [listIndex]="i"
+            (moveCardAcrossList)="moveCardAcrossList($event)" (deleteList)="deleteList($event)" attr.listIndex="{{i}}">
+        </app-list>
+        <div class="add-new-container">
+            <h6 class="text-center add-new-list" (click)="addList()">Add new card +</h6>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,17 @@
+<div class="list col custom-col list-drag-component" (dragover)="allowCardReplacement($event)" (drop)="dropCard($event)" id="list-{{listIndex}}">
+    <app-context-menu (contextAction)="delete()"></app-context-menu>
+    <p class="list-name" [(appContentEdit)]="list.name" *ngIf="listIndex > 2"></p>
+    <p class="list-name"    *ngIf="listIndex < 3" >{{list.name}}</p>
+    <!--  -->
+    <!-- List Card Starts -->
+    <div id="list-one" class="list-one">
+        <app-card-summary *ngFor="let card of this.list.cards;let i = index" [card]="card" [listIndex]="listIndex" [cardIndex]="i" attr.cardIndex="{{i}}"></app-card-summary>
+        
+    </div>
+    
+    <!-- List Card Ends -->
+    <h6 class="text-center add-new-card" (click)="addNewCard()" *ngIf="listIndex != 2">Add new task +</h6>
+
+
+
+</div>

@@ -1,0 +1,38 @@
+.col {
+    background-color: #F5F5F5;
+    margin: 0px;
+    padding: 5px;
+    /* padding-top: 10px;
+  padding-bottom: 10px; */
+    border-top: solid 5px blue;
+    max-width: 270px;
+}
+
+.text-center.add-new-card:hover {
+    opacity: 0.9;
+    color: #1518d1;
+}
+
+.text-center.add-new-card {
+    font-size: 15px;
+    color: black;
+    cursor: pointer;
+    opacity: 0.9;
+    min-width: 230px;
+}
+
+.list-name {
+    font-weight: bold;
+    text-align: center;
+}
+
+.list {
+    background-color: #e7e9ea;
+    min-width: 230px;
+}
+
+.list-one {
+    padding: 10px;
+    max-height: 60vh;
+    overflow-y: auto;
+}

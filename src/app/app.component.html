@@ -1,0 +1,28 @@
+<app-nav-bar></app-nav-bar>
+<router-outlet (activate)="onActivate($event)">
+</router-outlet>
+<app-modal-style id="alert-modal">
+    <app-alert></app-alert>
+</app-modal-style>
+<app-modal-style id="invite-popup-modal">
+    <app-invite-popup></app-invite-popup>
+</app-modal-style>
+<app-modal-style id="create-board-modal">
+    <app-create-board></app-create-board>
+</app-modal-style>
+<app-modal-style id="forgot-popup-modal">
+    <app-forgot-popup></app-forgot-popup>
+</app-modal-style>
+<app-modal-style id="create-workspace-modal">
+    <app-create-workspace></app-create-workspace>
+</app-modal-style>
+<app-modal-style id="card-detail-modal">
+    <app-card-detail-popup></app-card-detail-popup>
+</app-modal-style>
+
+
+<ngx-spinner type="ball-scale-multiple" color="#dd0424">
+    <p class="loading" style="color:#dd0424;">Loading...</p>
+</ngx-spinner>
+
+<!-- <app-todo-board></app-todo-board> -->
