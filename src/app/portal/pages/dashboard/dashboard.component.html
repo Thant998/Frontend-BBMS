@@ -1,0 +1,81 @@
+<div class="admin-breadcrumb">
+    <section class="breadcrumb-container container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item withlink" routerLink="/portal/dashboard/">Home
+                </li>
+                  <!-- routerLink="/admin/dashboard/" -->
+            </ol>
+        </nav>
+    </section>
+</div>
+
+
+<section class="admin-screen">
+    <!-- <div class="title-bar">
+        <h3>Recent View</h3> -->
+        <!-- <div>
+            <input class="fa fa-search" type="text" placeholder="Search ..." class="primary-text">
+        </div> -->
+    <!-- </div> -->
+    <!-- <div class="row"> -->
+        <!-- <div class="col-md-3">
+            <app-board></app-board>
+        </div>
+        <div class="col-md-3">
+            <app-board></app-board>
+        </div>  -->
+        <!-- <div class="col-md-3">
+            <app-board></app-board>
+        </div>  -->
+        <!-- <div > -->
+            <!-- <app-recent-view></app-recent-view> -->
+        <!-- </div> -->
+    <!-- </div> -->
+    <!-- <br><br><br> -->
+    <div class="title-bar">
+        <h3>Your Workspaces</h3>
+    </div>
+    <section class="workspace" *ngFor="let item of workspaces">                  <!--*ngFor = "let responseData of response" -->
+        <div class="title-bar">
+            <div class="name">
+                <div class="name-block" id="work">{{item.workspaceName?.substring(0,1)}}</div>
+                <input type="hidden" value="{{item.workspaceId}}" name="workspaceId" id="workspaceId" #workspaceId> 
+                   <h5><input type="text" value="{{item.workspaceName}}" name="workspaceName" id="workspaceName" #workspaceName></h5>
+                   
+                   <button (click)="update(workspaceId.value , workspaceName.value)" class="btn btn-primary"><i
+                    class="bi bi-pen"></i></button>
+                   <button (click)="delete(workspaceId.value)" class="btn btn-danger"><i
+                    class="bi bi-trash3-fill"></i></button>
+            </div>
+            <div class="block-container">
+                <!-- <div class="block" routerLink="/portal/view">View</div> -->
+                <button class="block" (click)="goMember(item.workspaceId)">Member</button>
+                <button class="block" (click)="goToBoard(item.workspaceId)">Board</button>
+                 
+            </div>
+        </div>
+
+    <div class="row">
+        <div class="board-container col-md-3"  *ngFor="let bdata of item.boards" (click)="goToDo(bdata.boardId , item.workspaceId)">
+            <div class="fade"></div>
+             <!-- <p > {{bdata.boardName}} </p>  -->
+             <ul >
+             <!-- <li (click)="goTest(bdata.boardId)"> <p > {{bdata.boardName}} </p> </li> -->
+  
+             <li> <p > {{bdata.boardName}} </p> </li>          </ul>
+            
+        </div>
+    
+    </div>
+<!-- 
+        <div class="row">
+            <div class="col-md-3" *ngFor="let bdata of item.boards">
+                <app-board [boardParam]="bdata"></app-board>
+            </div>
+        </div> -->
+    </section>
+    
+</section>
+
+

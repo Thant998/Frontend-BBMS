@@ -1,0 +1,40 @@
+.board-container {
+    //background-image: url('https://assets-global.website-files.com/62de641ce3132f751e31416e/62de641ce3132f2cf531493e_Chin.jpg');
+    background-image: url('https://thumbs.dreamstime.com/b/art-illustration-174515212.jpg');
+    //background-image: url('https://i.pinimg.com/originals/15/94/a6/1594a6d06fe8d0c080827d65d054b272.png');
+    //background-image: url('https://cdn.quotesgram.com/img/9/11/159964386-289313-jan17_quotes.jpg');
+    //background-image: url('https://www.thedesignwork.com/wp-content/uploads/2011/10/Wonderful-Collection-of-Candid-Photography-22.jpg');
+    //background-image: url('https://dagens-erhvervsnyt.dk/wp-content/uploads/2020/10/teamsammensaetning.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    cursor: pointer;
+    background-color: #e4eaec;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    padding-left: 10px;
+    position: relative;
+    padding-top: 10px;
+    margin: 5px;
+    .fade {
+        background: #0006;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 5px;
+        z-index: 1;
+    }
+    p {
+        font-weight: lighter;
+        
+        font-size: 20px;
+        margin: 0;
+        z-index: 2;
+        position: relative;
+        color: rgb(0, 0, 0);
+        font-style: normal;
+    }
+}

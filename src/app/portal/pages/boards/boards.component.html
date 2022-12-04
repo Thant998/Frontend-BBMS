@@ -1,0 +1,59 @@
+<div class="admin-breadcrumb">
+    <section class="breadcrumb-container container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item withlink" routerLink="/portal/dashboard/">Dashboard
+                </li>
+            </ol>
+        </nav>
+    </section>
+</div>
+<section class="admin-screen">
+    <div class="title-bar">
+        <h3>Boards</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="create-board">
+            <button type="button" class="button button1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <h5>Create Board +</h5>
+              </button>
+            </div>           
+        </div>
+        <div class="col-md-12">
+          <app-board></app-board>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <p class="text-invite">Create Board</p>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>       
+             <div class="modal-body">
+              <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+                <div class="mb-3">
+                  <input type="hidden" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="this.boards.workspaceId" name="boardId">
+                  <label for="exampleInputEmail1" class="form-label">Board Name</label>
+                    <input type="text"  class="form-control" formControlName="boardName" required [ngClass]="{'is-invalid': isSubmitted && f['boardName'].errors}" autocomplete="off" required>
+                    <div *ngIf="isSubmitted && f['boardName'].errors" class="invalid-feedback">
+                      <small *ngIf="f['boardName'].errors['required']">Board Name is required</small>
+                  </div> 
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Description</label>
+                  <input formControlName="description" type="textarea" class="form-control" id="exampleInputPassword1">
+                </div >
+                <div class="mt-20 text-center">
+                  <button  type="submit" class="popup-btn" >Create</button>
+                </div>
+            </form>
+            </div>           
+          </div>
+        </div>
+      </div>
+</section>
+
+
+

@@ -1,0 +1,8 @@
+<div class="row">
+
+    <div class="board-container col-md-3"  *ngFor="let bdata of boards" (click)="goToDo(bdata.boardId)" >
+        <div class="fade"></div>
+         <p > {{bdata.boardName}} </p> 
+    </div>
+
+ </div> 

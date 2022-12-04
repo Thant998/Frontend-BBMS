@@ -1,0 +1,4 @@
+<app-menu-bar (showMenu)="showMenu($event)"></app-menu-bar>
+<div class="screen-container" [ngClass]="{'screen-container-inactive': menuActive === false}">
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
+</div>

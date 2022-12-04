@@ -1,0 +1,110 @@
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    h3 {
+        font-weight: bold;
+        margin: 0;
+    }
+    input {
+        border: 1px solid #00000014;
+        padding: 10px;
+        border-radius: 5px;
+        width: 248px;
+    }
+    .block-container {
+        display: flex;
+        gap: 10px;
+        .block {
+            background: rgba(9, 30, 66, 0.0784313725);
+            padding: 5px;
+            text-align: center;
+            border-radius: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+            cursor: pointer;
+        }
+    }
+    .name {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        .name-block {
+            background: #fd3232;
+            height: 40px;
+            width: 50px;
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.workspace {
+    margin-bottom: 70px;
+}
+
+.create-board {
+    width: 20%;
+    height: 120px;
+    cursor: pointer;
+    background-color: #b3b4b8;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    padding-left: 10px;
+    position: relative;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .plus {
+        font-size: 50px;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: px;
+    margin: 4px 2px;
+    cursor: pointer;
+    // font-style: italic;
+  }
+
+  .button1 {background-color:#b3b4b8; color: rgb(8, 8, 8);}
+
+  .popup-btn {
+    background: #4769db;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 468px;
+}
+
+.text-invite {
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,54 @@
+<section class="admin-screen" >
+    <div class="member-header">
+        <div class="name" >
+            <div class="name-block">
+                {{workspaces.workspaceName?.substring(0,1)}}
+            </div>
+            <p>{{workspaces.workspaceName}}</p>
+        </div>
+        <div>
+            <button class="btn-primary_" (click)="inviteMembers('invite-popup-modal')">Invite Workspace members</button>
+        </div>
+    </div>
+    <hr>
+    <div class="title-bar">
+        <h3>Member List</h3>
+
+        <!-- <div>
+            
+            <input type="text" placeholder="Search ..." class="primary-text">
+            
+        </div> -->
+
+    <!-- <div>
+            
+        <form (ngSubmit)="onSubmit()">
+        <div class="search-container">
+  
+      <input type="text" placeholder="Search ..." class="primary-text" autocomplete="off" [(ngModel)]="members.name" name="boardName">
+      <button type="submit" class="btn btn-success">Search</button>
+        </div>
+        </fom>
+    </div> -->
+    </div>
+    <br>
+    <span *ngFor="let members of membersList; let i=index">
+    <!-- <div> -->
+        <div class="member-list"  *ngFor="let user of members.listUser">
+            <div class="name">
+                <div class="name-block">
+                   <p>{{i+1}}</p>
+                </div>
+            </div>
+            <p>{{user.name}}</p>
+           <p class="btn-primary_">{{members.status}}</p> 
+           <button  [disabled]="members.userId==user.id" (click)="deleteMember(members.id)" class="btn btn-danger"><i
+            class="bi bi-trash3-fill"></i></button> 
+        </div>
+    <!-- </div> -->
+    <hr>
+   </span>
+
+</section>
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css
+    ">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+</head>
+<body>
+
+    <div class="container-fluid vh-100  bg-primary bg-opacity-50  d-flex justify-content-center align-items-center
+    ">
+    <div class="container d-flex justify-content-center align-items-center">
+
+        <div class="row bg-light rounded-4">
+            <!--image-->
+
+            <div class="col-12 text-center ">
+                <img src="assets/images/contact-us/download-removebg-preview.png" class="img-fluid w-25 rounded-circle " alt="DAT">
+            </div>
+
+            <!-- form -->
+                <div class="col-12 px-5 pt-5">
+
+                    <p  style="color: red;" ><b>{{error}}</b></p>
+                    
+                    <form action="" #loginForm="ngForm" (ngSubmit)="chgpwd(loginForm)">
+                        <div class="form-group mb-3">
+                            <label for="" class="form-label fw-bold fs-6">Password</label>
+
+                            <input type="password" class="form-control" id="password" name = "password" ngModel required  #pass="ngModel"required [class.is-invalid]="pass.invalid && pass.touched" class="form-control" >
+                            <small [class.d-none]="pass.valid || pass.untouched" class="text-danger">Password is required</small>
+   
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="" class="form-label fw-bold fs-6">Confirm</label>
+
+                            <input type="password" class="form-control" id="confirm" name = "confirm" ngModel required  #con="ngModel"required [class.is-invalid]="con.invalid && con.touched" class="form-control" >
+                            <small [class.d-none]="con.valid || con.untouched" class="text-danger">Confirm Password is required</small>
+   
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <button [disabled]="loginForm.form.invalid" type="submit"  class="btn btn-lg btn-primary rounded-pill px-5 fw-bold fs-6">Enter</button>
+                            <p class="text-center mt-5"></p>
+                        </div>
+             
+                    </form>
+
+                </div>
+                
+        </div>
+    </div>
+    </div>
+
+
+
+
+ 
+    <script src="  https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
