@@ -1,0 +1,22 @@
+<header role="banner" *ngIf="routeLink.includes('portal') || routeLink.includes('todo')">
+    <!-- <h2> <img [src]="url"
+        style="width: 28px;">&nbsp; DAT</h2>  -->
+    <!-- <h2>&nbsp; &nbsp; &nbsp; <img [src]="url"
+            style="width: 40px; height: 40px;"></h2> -->
+    <h2 routerLink="/portal/dashboard" style="cursor: pointer;">&nbsp; DAT </h2>
+
+
+    <ul class="utilities">
+        <!-- <li (click)="reload()"><i class="fa fa-refresh" aria-hidden="true"></i></li> -->
+        <li class="noti">
+            <a routerLink="portal/notification">Notifications</a>
+            <div class="noti-container">
+                <h3  class="noti-title">Notifications</h3>
+               <app-notification></app-notification>
+            </div>
+        </li>
+        <li class="users"><a routerLink="portal/profile">My Account</a></li>
+        <li class="logout warn"><a (click)="logoutAccount()">Log Out</a></li>
+
+    </ul>
+</header>

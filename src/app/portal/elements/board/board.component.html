@@ -1,0 +1,15 @@
+
+<form (ngSubmit)="onSubmit()">
+  <div class="search-container">
+    <input type="hidden" class="form-control" id="workspaceId" aria-describedby="emailHelp"
+      [(ngModel)]="boards.workspaceId" name="workspaceId">
+    <input type="text" placeholder="Search ..." class="primary-text" autocomplete="off" [(ngModel)]="boards.boardName" name="boardName">
+    <button type="submit" class="btn btn-success">Search</button>
+  </div>
+</form>
+<div class="row" >
+  <div class="board-container col-md-3" *ngFor="let data of board" (click)="goToDo(data.boardId)">
+    <p >{{data.boardName}}</p>
+    <input type="hidden" value="{{data.boardId}}" name="boardId" #boardId>
+  </div>
+</div>
