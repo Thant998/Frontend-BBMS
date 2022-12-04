@@ -2,7 +2,11 @@
 <p align="center">
 A simple system to safely record daily
 </p>
-
+<p align="center">
+  <a href="https://www.gnu.org/licenses/gpl-3.0"><img alt="LICENSE" src="https://img.shields.io/badge/License-GPLv3-blue.svg"/></a>
+  <a href="https://android-arsenal.com/api?level=21"><img alt="API" src="https://img.shields.io/badge/API-21%2B-brightgreen"/></a> 
+  <a href="https://github.com/arduia/ProExpense/releases"><img alt="API" src="https://img.shields.io/github/v/release/arduia/ProExpense"/></a> 
+</p> <br>
 
 
 
