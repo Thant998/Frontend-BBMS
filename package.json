@@ -1,0 +1,53 @@
+{
+  "name": "team404",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^14.0.0",
+    "@angular/common": "^14.0.0",
+    "@angular/compiler": "^14.0.0",
+    "@angular/core": "^14.0.0",
+    "@angular/forms": "^14.0.0",
+    "@angular/material": "^10.0.0",
+    "@angular/platform-browser": "^14.0.0",
+    "@angular/platform-browser-dynamic": "^14.0.0",
+    "@angular/router": "^14.0.0",
+    "@ctrl/ngx-emoji-mart": "^7.1.0",
+    "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.9.1",
+    "css": "^3.0.0",
+    "file-saver": "^2.0.5",
+    "javascript": "^1.0.0",
+    "material-icons": "^1.12.1",
+    "ng-toast": "^2.0.0",
+    "ngx-progressbar": "^9.0.0",
+    "ngx-spinner": "^14.0.0",
+    "ngx-toastr": "^15.2.1",
+    "rxjs": "~7.5.0",
+    "save": "^2.9.0",
+    "sweetalert2": "^11.6.7",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.0.2",
+    "@angular/cli": "~14.0.2",
+    "@angular/compiler-cli": "^14.0.0",
+    "@types/file-saver": "^2.0.5",
+    "@types/jasmine": "~4.0.0",
+    "jasmine-core": "~4.1.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "typescript": "~4.7.2"
+  }
+}
