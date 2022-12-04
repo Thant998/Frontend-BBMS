@@ -27,6 +27,18 @@ A simple system to safely record daily
   <li>Can define projects deadline and scope</li>
 </ul> 
 
+## Features
+<ul>
+  <li>Can create account</li>  
+  <li>Create Workspaces</li>
+  <li>Create Boards</li> 
+  <li>Invite members to workspaces</li>
+  <li>Create custom cards and add tasks</li> 
+  <li>Can drag and drop tasks</li> 
+  <li>Assign members to tasks</li>
+  <li>Create Activities and set due date</li>
+</ul> 
+
 *Contribution Welcome*
 
 # License
