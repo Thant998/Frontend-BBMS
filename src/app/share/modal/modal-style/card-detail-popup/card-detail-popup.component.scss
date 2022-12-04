@@ -1,0 +1,258 @@
+h4 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+.emoji-container{
+    position: absolute;
+    right: 0;
+    top: 55px;
+}
+
+.activity-container{
+    //border: 1px solid;
+    align-items: center;
+    margin : 50;
+    display: flex;
+    gap : 5px;
+    p{
+        margin: 0;
+        padding: 0;
+        width: 90%;
+    padding: 10px;
+    padding-bottom: 5px;
+    }
+}
+
+.bbbbbb{
+    border: 1px solid;
+    margin : 50;
+    display: flex;
+    gap : 100px;
+}
+
+.coverAttach{
+    padding: 10px;
+    /* background: whitesmoke; */
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #00000012;
+    margin-bottom: 20px;
+}
+
+.attach-file{
+    padding: 10px;
+    background: whitesmoke;
+    border-radius: 5px;
+}
+
+
+
+.popup-btn {
+    background: rgb(27, 85, 139);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100px;
+}
+
+.info-icon {
+    font-size: 40px;
+    //color: #28a745;
+    color: var(--bs-gray-500);
+}
+
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    right: 0;
+    font-size: 40px;
+    top: -20px;
+}
+
+.text-invite {
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.member-title {
+    margin: auto;
+    position: relative;
+    top: 13px;
+}
+
+.member-container {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
+    .member-list {
+        justify-content: center;
+        background: rgb(92, 29, 194);
+        /* padding: 10px; */
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        color: white;
+        border-radius: 100px;
+    }
+}
+
+.comment-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.comment-text {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.comment-block {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    .member {
+        width: 40px;
+        height: 40px;
+        background: rgb(58, 15, 175);
+        color: white;
+        border-radius: 100px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+}
+
+.m-name {
+    font-weight: bold;
+    margin: auto;
+}
+
+.text-comment {
+    font-size: 13px;
+    margin: auto;
+}
+
+.date {
+    margin: auto;
+    font-size: 12px;
+    color: gray;
+    margin-top: 8px;
+    font-weight: normal;
+}
+
+// .menu {
+//     background: #e3e3e3;
+// }
+
+.button-group2{
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    button {
+        border: none;
+        width: 70px;
+        font-size: 12px;
+        border-radius: 5px;
+        background: rgb(151, 148, 148);
+    }
+    button:hover {
+        background-color: #e3e3e3;
+    }
+}
+
+.action-card {
+    background: #e3e3e3;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.action-card:hover {
+    background-color: #e3e3e3;
+    cursor: pointer;
+}
+
+.members_ {
+    z-index: 99;
+    border: 1px solid #00000026;
+    background: white;
+    width: fit-content;
+    padding: 15px;
+    position: absolute;
+    border-radius: 5px;
+    left: 111px;
+    top: 49px;
+    text-align: left;
+    .close {
+        font-size: 30px;
+        top: -5px;
+        right: 10px;
+    }
+}
+
+.title_ {
+    margin: auto;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.member-wrapper{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.member-block_ {
+    border-radius: 5px;
+    display: flex;
+    background: whitesmoke;
+    padding: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    gap: 10px;
+    .member {
+        width: 30px;
+        height: 30px;
+        background: rgb(58, 15, 175);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+    }
+    p {
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        font-size: 13px;
+    }
+}
+
+.btn-secondary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #1fb31c;
+}
+
+  
+  /* Style the form icons */
+  

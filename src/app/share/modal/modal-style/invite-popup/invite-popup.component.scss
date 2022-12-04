@@ -1,0 +1,44 @@
+h4 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+.popup-btn {
+    background: rgb(58, 145, 228);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100px;
+}
+
+.info-icon {
+    font-size: 40px;
+    //color: #28a745;
+    color: var(--bs-gray-500);
+}
+
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    right: 0;
+    font-size: 40px;
+    top: -20px;
+}
+
+.text-invite {
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.primary-input {
+    border: 1px solid rgba(0, 0, 0, 0.0784313725);
+    padding: 10px;
+    border-radius: 5px;
+    width: 450px;
+}

@@ -1,0 +1,37 @@
+<div class="style-modal-confirm">
+    <div class="">
+
+        <div class=" m-auto ">
+            <div class="fade show" role="alert" style="position: relative">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" (click)="closeModal()">×</span>
+                </button>
+                <p class="text-invite">Create Workspace</p>
+
+                <form [formGroup]="form" (ngSubmit)="createWorkspace()">
+                    <div class="form_">
+                    </div>
+
+                    <div class="form_">
+                        <input type="text" class="form-control" formControlName="workspace_title" required [ngClass]="{'is-invalid': isSubmitted && f['workspace_title'].errors}" autocomplete="off">
+                        <div *ngIf="isSubmitted && f['workspace_title'].errors" class="invalid-feedback">
+                            <small *ngIf="f['workspace_title'].errors['required']">WorkSpace Name is required</small>
+                        </div>
+                        <!-- <input type="text" name="name" placeholder="workspace Title" class="primary-input" ngModel id="Password"  #pass="ngModel"required [class.is-invalid]="pass.invalid && pass.touched" class="form-control" required/>
+                        <small [class.d-none]="pass.valid || pass.untouched" class="text-danger">WorkSpace Name is required</small> -->
+                    </div>
+
+                    <!-- <div class="form_">
+                        <textarea class="primary-textarea" placeholder="description"></textarea>
+                    </div> -->
+
+                    <div class="mt-20 text-center">
+                        <button type="submit"  data-dismiss="modal" class="popup-btn" >Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="style-modal-background-confirm"></div>

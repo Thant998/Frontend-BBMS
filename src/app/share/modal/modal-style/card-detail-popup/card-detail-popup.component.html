@@ -1,0 +1,223 @@
+<div class="style-modal-confirm">
+    <div class="">
+
+        <div class=" m-auto text-center">
+            <div class="fade show" role="alert" style="position: sticky">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" (click)="closeModal()">×</span>
+                </button>
+                <br><br>
+
+                <form [formGroup]="form" (ngSubmit)="createTask()">
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-9" style="text-align: left;">
+                                <input formControlName="task_title" required
+                                    [ngClass]="{'is-invalid': isSubmitted && f['task_title'].errors}" autocomplete="off"
+                                    type="text" [ngModel]="taskData?.name" class="primary-text" style="width:100%" />
+                                <div *ngIf="isSubmitted && f['task_title'].errors" class="invalid-feedback">
+                                    <small *ngIf="f['task_title'].errors['required']">Task Name is required</small>
+                                </div>
+                                <p class="comment-title member-title">Member List</p>
+                                <div class="member-wrapper">
+                                    <div class="member-container">
+
+
+                                        <div class="member-list" *ngFor="let data of taskMember">
+                                            <!-- <span>M</span> -->
+                                            <span> {{data.name?.substring(0,1)}} </span>
+
+                                        </div>
+                                        <!-- <div class="member-list">
+                                    <span>B</span>
+                                </div>
+                                <div class="member-list">
+                                    <span>C</span>
+                                </div> -->
+                                    </div>
+                                </div>
+                                <!-- {{taskData?.description}} -->
+                                <textarea class="desc primary-textarea" formControlName="description"
+                                    [(ngModel)]="description"></textarea>
+
+                                <button class="btn btn-primary" type="submit">Save</button>
+
+                                <hr>
+
+                                <p class="comment-title"> Activity </p>
+                                <div class="coverAttach" *ngFor="let d of taskActivity;let i = index">
+                                  
+                                    <div class="activity-container">
+                                        <!-- <p>{{d.activityName}}</p> -->
+                                        <input type="checkbox" (click)="checkboxClick(i)"
+                                            [checked]="d.status == 'true'">
+                                        <p [(appContentEdit)]="d.activityName" (input)="activityNameChange($event,i)">
+                                        </p>
+                                        <div class="button-group2">
+                                            <button type="button" (click)="showUploadPopup(d.activityId)" class="btn btn-primary"
+                                                data-bs-toggle="modal" data-bs-target="#uploadModal"><i class="fas fa-file-upload"></i></button>
+                                        </div>
+                                        <div class="button-group2">
+                                            <button (click)="deleteActivity(d.activityId,i)"
+                                                type="button" class="btn btn-danger"><i
+                                                class="bi bi-trash3-fill"></i></button>
+                                        </div>
+
+                                    </div>
+                                    <div *ngFor="let a of attached">
+                                        <div *ngFor="let att of a.attach" class="pb-10">
+                                            <div *ngIf="d.activityId==a.activityId">
+                                                <p class="attach-file"><i class="bi bi-paperclip"></i>{{att.name}}</p>
+                                                <div class="button-group2">
+                            
+                                                    <button type="button" class="btn btn-primary"
+                                                        (click)="downloadAttached(att.id)"><i class="bi bi-download"></i></button>
+                                                    <button class="btn btn-danger" (click)="deleteAttach(att.id)" type="button"><i
+                                                        class="bi bi-trash3-fill"></i></button>
+                                                </div>
+                                            </div>
+                                          
+                                        </div>
+                                    </div>
+                                   
+                                    <!-- <div class="button-group">
+                                        <button type="button" (click)="showUploadPopup(d.activityId)"
+                                            data-bs-toggle="modal" data-bs-target="#uploadModal">upload</button>
+                                    </div> -->
+                                    
+                                </div>
+
+                                <br>
+
+                                <button class="btn btn-primary" type="button" (click)="addActivity()">Add</button>
+                                <hr>
+
+                                <p class="comment-title">Comment Section</p>
+                                <div class="comment-text" style="position: relative;">
+                                    <div style="width: 100%;">
+                                        <input type="hidden" name="id" id="id" [value]="">
+                                        <input type="text" class="primary-text" style="width: 100%;"
+                                            [ngModelOptions]="{standalone: true}" [(ngModel)]="names" name="name1" />
+                                    </div>
+                                    <div (click)="showEmoji =  !showEmoji;$event.stopPropagation()">😀</div>
+                                    <button type="button" type="button" class="btn btn-primary"
+                                        (click)="createComment()">Send</button>
+
+                                    <div class="emoji-container" *ngIf="showEmoji">
+                                        <emoji-mart (emojiSelect)="select($event)"></emoji-mart>
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <div class="comment-container" *ngFor="let com of comment">
+                                    <div class="comment-block">
+                                        <div class="member">
+                                            {{com.userName?.substring(0,1)}}
+                                        </div>
+                                        <div class="text-list">
+                                            <p class="m-name"> {{com.userName}} &nbsp;&nbsp;&nbsp; <span class="date">{{
+                                                    com.date}} {{com.time}}</span>
+                                            </p>
+                                            <p class="text-comment">{{com.name}}</p>
+
+                                            <div class="button-group">
+                                                <!-- <button>Edit</button> -->
+                                                <button type="button" (click)="deleteComment(com.id)">Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="comment-block">
+                                    <div class="member">
+                                        A
+                                    </div>
+                                    <div class="text-list">
+                                        <p class="m-name">Member Name &nbsp;&nbsp;&nbsp; <span class="date">12/10/2022</span>
+                                        </p>
+                                        <p class="text-comment">This is comment</p>
+
+                                    </div>
+                                </div> -->
+                                </div>
+                            </div>
+                            <div class="col-md-3 menu">
+                                <div style="position: relative;">
+                                    <div class="action-card" (click)="showMemberOpen()">
+                                        <i class="bi bi-person"></i> &nbsp; Member
+                                    </div>
+                                    <div class="members_" *ngIf="showMember == true">
+                                        <button type="button" class="close" (click)="hideMember()">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                        <br>
+                                        <input type="text" placeholder="Search..." class="primary-text">
+                                        <p class="title_">Members</p>
+                                        <div>
+                                            <div class="member-block_" *ngFor="let user of userList"
+                                                (click)="setTaskMember(user)">
+                                                <div class="member">
+                                                    {{user.name?.substring(0,1)}}
+                                                </div>
+                                                <p> {{user.name}} </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="position: relative;">
+                                    <div class="action-card" (click)="showDueDateOpen()">
+                                        <i class="bi bi-clock"></i> &nbsp; Date
+                                    </div>
+                                    <div class="date-container members_" *ngIf="showDueDate">
+                                        <button type="button" class="close" (click)="hideDueDate()">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+
+                                        <p class="title_">Start Date</p>
+                                        <input type="date" class="primary-text" [(ngModel)]="startDate"
+                                            [ngModelOptions]="{standalone: true}">
+                                        <!-- <p>{{taskData?.startDate}}</p>
+                                    <p>{{taskData?.startTime}}</p>  -->
+
+                                        <p class="title_">End Date</p>
+                                        <input type="date" class="primary-text" [(ngModel)]="endDate"
+                                            [ngModelOptions]="{standalone: true}">
+                                        <!-- <p>{{taskData?.endDate}}</p>
+                                    <p>{{taskData?.endTime}}</p> -->
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="style-modal-background-confirm"></div>
+
+
+<div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="text-invite">Upload File</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <input class="input-field" type="file" (change)="onChange($event)" enctype="multipart/form-data"
+                    multiple />
+
+                <button data-bs-dismiss="modal" type="button" (click)="uploadFile()" class="btn btn-primary mt-2"
+                    style="width: 100%;">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="search-dropdown" [ngClass]="{'open':shown && list !== undefined}">
+    <div class="search-dropdown__btn admin-dropdown" (click)="show()"><span>{{value}}</span></div>
+    <div class="search-dropdown__dropdown">
+        <input class="search-dropdown__dropdown__search" type="text" placeholder="Search" [(ngModel)]="keyword" *ngIf="activeSearch" (keyup)="search(keyword)" #input />
+        <div class="search-dropdown__dropdown__scroller">
+            <div class="search-dropdown__dropdown__item" *ngFor="let item of list" (click)="select(item)">
+                <!-- <div class="search-dropdown__dropdown__item__img"
+            [style.background-image]="'url(data:image/jpg;base64,'+item[_img]+')'"></div> -->
+                {{item[_label]}}
+            </div>
+            <!-- <div class="search-dropdown__dropdown__msg" *ngIf="list?.length == 0">No Result Found</div> -->
+        </div>
+    </div>
+</div>
+
+
+<!-- <app-search-dropdown 
+  [items]="location" 
+  [label]="'enname'" 
+  [activeSearch] = false
+  [title] = "'aa'"
+  [(ngModel)]="location">
+</app-search-dropdown> -->

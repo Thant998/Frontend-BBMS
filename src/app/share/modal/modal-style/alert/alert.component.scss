@@ -1,0 +1,26 @@
+h4 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+.popup-btn {
+    background: var(--bs-success);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100px;
+}
+
+.info-icon {
+    font-size: 40px;
+    //color: #28a745;
+    color: var(--bs-gray-500);
+}
+
+#message {
+    font-size: 18px;
+    margin-bottom: 28px;
+    margin-top: 15px;
+}

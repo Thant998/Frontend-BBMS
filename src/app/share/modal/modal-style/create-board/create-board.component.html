@@ -1,0 +1,61 @@
+<div class="style-modal-confirm">
+    <div class="">
+
+        <div class=" m-auto ">
+            <div class="fade show" role="alert" style="position: relative">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" (click)="closeModal()">×</span>
+                </button>
+                <p class="text-invite">Create Board</p>
+
+                <form [formGroup]="form" (ngSubmit)="createBoard()">
+
+                    <!-- <div class="form_">
+                        <input type="hidden" name="boardName" [(ngModel)]="boards.workspaceId" placeholder="Board Title" class="primary-input" required/>
+                    </div> -->
+
+                    <div class="form_">
+                        <input type="text" class="form-control" formControlName="board_title" required [ngClass]="{'is-invalid': isSubmitted && f['board_title'].errors}" autocomplete="off" />
+                        <div *ngIf="isSubmitted && f['board_title'].errors" class="invalid-feedback">
+                            <small *ngIf="f['board_title'].errors['required']">Board Name is required</small>
+                        </div>
+                    </div>
+
+                    <!-- <div class="form_">
+                    <app-search-dropdown [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedWorkspace" [items]="workspace" [label]="'name'" [title]="'Select Work Space'" [activeSearch]="true" (ngModelChange)="workSpaceChange(selectedWorkspace)"></app-search-dropdown>
+                </div> -->
+
+                    <!-- <div class="form_">
+                        <textarea class="primary-textarea" formControlName="description" required  placeholder="description"></textarea>
+                    </div> -->
+
+                    <div class="mt-20 text-center">
+                        <button type="submit" data-dismiss="modal" class="popup-btn">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="style-modal-background-confirm"></div>
+
+
+<!-- getShops()  {
+ 
+    let param = {
+      "pagenoStr": this.pagenoStr
+    }
+
+    this.shoplist_.getAllShop(param).toPromise().then((response: any) => {
+      var shops = this.shop
+
+      let shop_products = this.share_.convertData(response.d);
+      this.shop_count = shop_products.length
+
+      for (let i = 0 ; i < this.shop_count ; i++){
+        shops.push(shop_products[i])
+      }
+  
+    }) 
+  } -->
