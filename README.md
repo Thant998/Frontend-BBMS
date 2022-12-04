@@ -8,7 +8,13 @@ A simple system to safely record daily
   <a href="https://github.com/arduia/ProExpense/releases"><img alt="API" src="https://img.shields.io/github/v/release/arduia/ProExpense"/></a> 
 </p> <br>
 
-
+<table align="center">
+       <tr>
+          <td><img src="https://github.com/arduia/ProExpense/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="220"></td>
+          <td><img src="https://github.com/arduia/ProExpense/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="220"></td>
+          <td><img src="https://github.com/arduia/ProExpense/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" width="220"></td>
+       </tr>
+ </table>
 
 ## Why using BBMS?
 <ul>
@@ -20,10 +26,6 @@ A simple system to safely record daily
   <li>Tracking progress</li> 
   <li>Can define projects deadline and scope</li>
 </ul> 
-
-
-
-
 
 *Contribution Welcome*
 
