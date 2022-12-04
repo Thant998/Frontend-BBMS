@@ -10,7 +10,7 @@ A simple system to safely record daily
 
 <table align="center">
        <tr>
-          <td><img src="https://github.com/arduia/ProExpense/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="220"></td>
+          <td><img src="https://github.com/Thant998/Frontend-BBMS/blob/main/pictures/Screenshot%20(198).png" width="220"></td>
           <td><img src="https://github.com/arduia/ProExpense/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="220"></td>
           <td><img src="https://github.com/arduia/ProExpense/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" width="220"></td>
        </tr>
