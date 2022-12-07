@@ -13,8 +13,6 @@ A simple system to safely record daily
           <td><img src="https://github.com/Thant998/Frontend-BBMS/blob/main/pictures/Screenshot%20(198).png" width="220"></td>
           <td><img src="https://github.com/Thant998/Frontend-BBMS/blob/main/pictures/Screenshot%20(197).png" width="220"></td>
           <td><img src="https://github.com/Thant998/Frontend-BBMS/blob/main/pictures/Screenshot%20(199).png" width="220"></td>
-            <td><img src="https://github.com/Thant998/Frontend-BBMS/blob/main/pictures/Screenshot%20(197).png" width="220"></td>
-          <td><img src="https://github.com/Thant998/Frontend-BBMS/blob/main/pictures/Screenshot%20(199).png" width="220"></td>
        </tr>
  </table>
 
