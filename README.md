@@ -39,7 +39,7 @@ A simple system to safely record daily
   <li>Create Activities and set due date</li>
 </ul> 
 
-*Contribution Welcome*
+<!--*Contribution Welcome*-->
 
 # License
 ```xml
