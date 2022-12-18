@@ -31,10 +31,6 @@ const routes: Routes = [
     path : 'chnpwd',
     component : ChangePwdComponent
    },
-  //  {
-  //   path : 'createWorkspace',
-  //   component : CreateWorkspaceComponent
-  //  },
    {
     path : 'portal/todo/:boardId',
     component : BoardComponent
