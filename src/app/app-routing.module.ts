@@ -44,8 +44,7 @@ const routes: Routes = [
     path: 'portal',
     component: ScreenComponent,
     children: adminRoute,
-    // canActivate:[AuthGuard],
-    // canActivateChild:[AuthGuard]
+   
   },
 ];
 
