@@ -43,8 +43,7 @@ const routes: Routes = [
   {
     path: 'portal',
     component: ScreenComponent,
-    children: adminRoute,
-   
+    children: adminRoute,  
   },
 ];
 
